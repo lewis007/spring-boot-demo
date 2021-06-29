@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.lewis.demo</groupId>
+    <artifactId>about-db</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>about-db</name>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.lewis.demo</groupId>
+        <artifactId>spring-boot-demo</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <properties>
+        <mysql.version>8.0.25</mysql.version>
+        <druid.version>1.2.5</druid.version>
+        <mybatis.springboot.version>2.2.0</mybatis.springboot.version>
+        <pagehelper.version>1.3.0</pagehelper.version>
+        <mybatis.generator.version>1.4.0</mybatis.generator.version>
+    </properties>
+
+    <modules>
+        <module>demo-mysql</module>
+        <module>demo-mybatis</module>
+        <module>demo-druid</module>
+        <module>demo-pagehelper</module>
+        <module>demo-mybatis-generator</module>
+    </modules>
+
+</project>

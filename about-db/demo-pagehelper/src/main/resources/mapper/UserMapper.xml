@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="demo.pagehelper.UserMapper">
+
+    <select id="findAll" resultType="demo.pagehelper.User">
+        SELECT *
+        FROM t_user
+    </select>
+
+    <insert id="addUser" parameterType="demo.pagehelper.User" useGeneratedKeys="true">
+        INSERT INTO t_user (name, email)
+        VALUES (#{name}, #{email})
+    </insert>
+
+    <update id="updateUser" parameterType="demo.pagehelper.User">
+        UPDATE t_user
+        SET name  = #{name},
+            email = #{email}
+        WHERE id = #{id}
+    </update>
+
+    <insert id="addUsers" parameterType="demo.pagehelper.User" useGeneratedKeys="true">
+        INSERT INTO t_user (name, email) VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.name}, #{item.email})
+        </foreach>
+    </insert>
+
+</mapper>

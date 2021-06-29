@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="demo.druid.UserMapper">
+
+    <select id="findAll" resultType="demo.druid.User">
+        SELECT *
+        FROM t_user
+    </select>
+
+    <insert id="addUser" parameterType="demo.druid.User" useGeneratedKeys="true">
+        INSERT INTO t_user (name, email)
+        VALUES (#{name}, #{email})
+    </insert>
+
+    <update id="updateUser" parameterType="demo.druid.User">
+        UPDATE t_user
+        SET name  = #{name},
+            email = #{email}
+        WHERE id = #{id}
+    </update>
+
+</mapper>
