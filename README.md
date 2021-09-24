@@ -19,6 +19,6 @@
 ## 技术栈
 
 * Spring Boot: 2.5.5
-* Spring Cloud: 2020.0.3
+* Spring Cloud: 2020.0.4
 * JDK: 1.8.0_301
 * MySQL 数据库: 5.7.11
